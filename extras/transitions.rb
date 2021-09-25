@@ -1,3 +1,3 @@
-require 'engine/extras/transitions/fade'
-require 'engine/extras/transitions/fade_in'
-require 'engine/extras/transitions/fade_out'
+require 'rok-engine/extras/transitions/fade'
+require 'rok-engine/extras/transitions/fade_in'
+require 'rok-engine/extras/transitions/fade_out'

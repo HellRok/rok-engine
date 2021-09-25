@@ -9,7 +9,7 @@ class TestEngineTexture < MTest::Unit::TestCase
 
   def test_draw_no_args
     texture = Texture2D.load('test/assets/test.png')
-  
+
     clear_background WHITE
     texture.draw
     flush_frame

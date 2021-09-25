@@ -1,1 +1,1 @@
-require 'engine/extras/extensions/texture'
+require 'rok-engine/extras/extensions/texture'

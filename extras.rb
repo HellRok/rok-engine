@@ -1,2 +1,2 @@
-require 'engine/extras/extensions'
-require 'engine/extras/transitions'
+require 'rok-engine/extras/extensions'
+require 'rok-engine/extras/transitions'
