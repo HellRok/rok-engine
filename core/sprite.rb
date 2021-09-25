@@ -1,15 +1,24 @@
 class Sprite < Node
-  attr_accessor :x, :y, :rotation, :colour, :rotation, :origin, :hidden
+  attr_accessor :x, :y, :rotation, :colour, :rotation, :origin, :hidden, :destination, :track_parent
   def initialize(x, y, texture)
     @position = Vector2.new(x, y)
     @texture = load_texture(texture)
 
     @rotation = 0
     @source = Rectangle.new(0, 0, @texture.width, @texture.height)
-    @destination = Rectangle.new(@position.x, @position.y, @texture.width, @texture.height)
+    @destination = Rectangle.new(@position.x, @position.y, width, height)
     @origin = Vector2.new(@texture.width / 2, @texture.height / 2)
     @colour = WHITE
     @hidden = false
+    @track_parent = true
+  end
+
+  def width
+    @texture.width
+  end
+
+  def height
+    @texture.height
   end
 
   def show?
@@ -42,8 +51,10 @@ class Sprite < Node
   end
 
   def update(delta)
-    @destination.x = parent.position.x + @position.x
-    @destination.y = parent.position.y + @position.y
+    if parent.respond_to?(:position) && @track_parent
+      @destination.x = parent.position.x + @position.x
+      @destination.y = parent.position.y + @position.y
+    end
   end
 
   def teardown

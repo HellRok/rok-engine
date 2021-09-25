@@ -1,5 +1,7 @@
 require 'engine/core/helpers'
 
+require 'engine/core/resource_manager'
+
 require 'engine/core/events'
 require 'engine/core/node'
 require 'engine/core/area'

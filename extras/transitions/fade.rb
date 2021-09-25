@@ -7,7 +7,7 @@ class Fade < Node
     @duration = duration
     @callback = block
     @timer = 0
-    @colour = BLACK
+    @colour = Colour.new(0, 0, 0, opacity)
     @rectangle = Rectangle.new(0, 0, get_screen_width, get_screen_height)
   end
 
