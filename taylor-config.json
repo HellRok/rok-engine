@@ -1,0 +1,13 @@
+{
+  "name": "engine",
+  "version": "v0.0.1",
+  "input": "test/test.rb",
+  "export_directory": "./exports",
+  "export_targets": [
+    "linux"
+  ],
+  "load_paths": [
+    "./"
+  ],
+  "copy_paths": []
+}
