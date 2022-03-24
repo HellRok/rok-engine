@@ -1,4 +1,6 @@
-class Delay < Node
+class Delay
+  include Node
+
   attr_reader :event, :length, :timer
 
   def initialize(event: nil, length:, &block)

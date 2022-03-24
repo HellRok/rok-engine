@@ -1,4 +1,6 @@
-class Sprite < Node
+class Sprite
+  include Node
+
   attr_accessor :x, :y, :rotation, :colour, :rotation, :origin, :hidden, :destination, :track_parent
   def initialize(x, y, texture)
     @position = Vector2.new(x, y)

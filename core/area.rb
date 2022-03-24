@@ -1,6 +1,8 @@
-AREA_DEBUG = false
+AREA_DEBUG ||= false
 
-class Area < Node
+class Area
+  include Node
+
   attr_accessor :rectangle
   attr_reader :listeners
 

@@ -1,4 +1,6 @@
-class Scene < Node
+module Scene
+  include Node
+
   attr_accessor :manager
 
   def scene

@@ -1,4 +1,6 @@
-class TestNode < Node
+class TestNode
+  include Node
+
   attr_accessor :position, :updated, :child_callback_run, :torndown
 
   def initialize

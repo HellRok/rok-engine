@@ -1,11 +1,11 @@
 class TestEngineNode < MTest::Unit::TestCase
   def test_children
-    assert_equal [], Node.new.children
+    assert_equal [], TestNode.new.children
   end
 
   def test_add_child
-    node = Node.new
-    child = Node.new
+    node = TestNode.new
+    child = TestNode.new
     node.add_child(child)
 
     assert_equal [child], node.children
@@ -21,7 +21,7 @@ class TestEngineNode < MTest::Unit::TestCase
   end
 
   def test_remove_child
-    node = Node.new
+    node = TestNode.new
     child = TestNode.new
     node.add_child(child)
 
@@ -34,7 +34,7 @@ class TestEngineNode < MTest::Unit::TestCase
   end
 
   def test_remove_self
-    node = Node.new
+    node = TestNode.new
     child = TestNode.new
     node.add_child(child)
 
@@ -47,12 +47,12 @@ class TestEngineNode < MTest::Unit::TestCase
   end
 
   def test_paused
-    node = Node.new
+    node = TestNode.new
     assert_false node.paused
   end
 
   def test_pause
-    node = Node.new
+    node = TestNode.new
     assert_false node.paused
 
     node.pause
@@ -60,7 +60,7 @@ class TestEngineNode < MTest::Unit::TestCase
   end
 
   def test_unpause
-    node = Node.new
+    node = TestNode.new
     assert_false node.paused
 
     node.pause

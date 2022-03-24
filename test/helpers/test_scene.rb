@@ -1,4 +1,6 @@
-class TestScene < Scene
+class TestScene
+  include Scene
+
   attr_accessor :ticked, :setup_ran, :teardown_ran
 
   def update(delta)

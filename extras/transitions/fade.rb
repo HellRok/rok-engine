@@ -1,4 +1,6 @@
-class Fade < Node
+class Fade
+  include Node
+
   attr_reader :duration, :timer
 
   def initialize(duration, &block)

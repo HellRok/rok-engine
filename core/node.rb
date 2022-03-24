@@ -1,4 +1,4 @@
-class Node
+module Node
   attr_writer :children
   attr_accessor :paused, :parent
 
